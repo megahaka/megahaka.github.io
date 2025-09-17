@@ -1,0 +1,247 @@
+:root {
+  --primary: #1c3355;
+  --primary-75: #1c3355c2;
+  --primary-50: #1c335583;
+  --primary-25: #1c33553a;
+  --white: #F7F7F7;
+  --border-radius: 5px;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-color: var(--white);
+  color: var(--primary);
+  letter-spacing: 1px;
+}
+
+.color-primary{
+    color: var(--primary) !important;
+}
+
+p{
+  font-weight: 500 !important;
+}
+
+strong{
+    font-weight: 700 !important;
+}
+a{
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+/** HOME */
+.box-home{
+    text-align: center;
+    overflow: hidden !important;
+}
+
+.box-arrow{
+    width: 50px;
+}
+
+.slide-top{
+    overflow-x: hidden !important;
+}
+
+.box-headline{
+    font-size: 7rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.box-headline p {
+    margin: 0;
+}
+
+.box-headline p:first-child {
+    position: relative;
+    bottom: -70px;
+}
+
+.subtitle{
+    font-size: 1.2rem;
+    top: -30px;
+    position: relative;
+    color: var(--primary);
+}
+
+.btn-whatsapp{
+    background-color: #25d366 !important;
+    color: #000000ce !important;
+    font-size: 1.2rem !important;
+    font-weight: bold !important;
+    letter-spacing: 1px !important;
+    padding: 8px 25px !important;
+}
+
+.btn-whatsapp:hover{
+    background-color: #075e54 !important;
+    color: #ffffffce !important;
+}
+
+/** VIDEO SECTION */
+.video-section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;                /* atrás de todo */
+  filter: blur(5px);          /* 👈 blur aplicado solo al video */
+  transform: scale(1.1);      /* 👈 evita ver bordes borrosos */
+}
+
+/* Overlay azul transparente */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #30589444; /* azul translúcido */
+  z-index: -1; /* encima del video, debajo del contenido */
+}
+
+/* Contenido visible */
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);
+}
+
+.title{
+    font-weight: 700;
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+.services-description{
+    font-size: 24px;
+}
+
+.list-group-flush .list-group-item {
+    font-size: 20px;
+    margin: 15px 0;
+    height: 40px; /* altura fija */
+    transition: font-size 0.2s;
+    cursor: default;
+}
+
+.list-group-flush .list-group-item:hover{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/** CONTACTO */
+
+.img-col {  /* ejemplo, ajustá según necesites */
+  background-size: contain;   /* o "contain" si querés que toda la imagen se vea */
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.form{
+    padding: 15px;
+    width: 100%;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    border-width: 5px 5px 0 5px;
+    border-style: solid;
+    background-color: var(--primary);
+}
+
+/** FOOTER */
+footer{
+    padding: 35px 0px 0px 0px;
+    background-color: var(--primary);
+}
+
+footer li,
+footer h3,
+footer p{
+    color: var(--white) !important;
+}
+
+.last-footer p{
+    font-weight: 300 !important;
+    font-size: 0.8rem;
+    padding: 15px 0px;
+}
+
+.list-group-item svg {
+  opacity: 0;
+  transform: translateX(0px);
+  transition: all 0.3s ease;
+}
+
+.list-group-item:hover svg {
+  opacity: 1;
+  transform: translateX(10px);
+}
+
+.link-lg{
+    text-decoration: none;
+    color: #f3bd68 !important;
+}
+.link-lg:hover{
+    text-decoration: underline;
+    color: var(--white);
+    opacity: 1 !important;
+}
+
+/* Small (SM) - ≥576px */
+@media (min-width: 576px) {
+  
+}
+
+/* Medium (MD) - ≥768px */
+@media (min-width: 768px) {
+    .box-headline{
+        font-size: 9rem;
+    }
+    .subtitle{
+        font-size: 1.6rem;
+        top: -40px;
+    }
+}
+
+/* Large (LG) - ≥992px */
+@media (min-width: 992px) {
+    .img-col {
+        background-image: url("../img/bg-contact.webp");
+    }
+    footer{
+        padding: 75px 0px 1px 0;
+    }
+}
+
+/* Extra Large (XL) - ≥1200px */
+@media (min-width: 1200px) {
+    .box-headline{
+        font-size: 10rem;
+    }
+    .box-headline p:first-child {
+        bottom: -100px;
+    }
+    .subtitle{
+        font-size: 1.8rem;
+        top: -50px;
+    }
+}
+
+/* Extra Extra Large (XXL) - ≥1400px */
+@media (min-width: 1400px) {
+  
+}
